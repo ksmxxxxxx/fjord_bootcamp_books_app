@@ -1,0 +1,28 @@
+  <li id="<%= dom_id book %>">
+    <dl>
+      <dt>Title</dt>
+      <dd>
+        <%= book.title %>
+      </dd>
+    </dl>
+    <dl>
+      <dt>Author</dt>
+      <dd>
+        <%= book.author %>
+      </dd>
+    </dl>
+    <dl>
+      <dt>Memo</dt>
+      <dd>
+        <%= book.memo %>
+      </dd>
+    </dl>
+    <nav>
+      <ul>
+        <li><%= link_to "Show", book %></li>
+        <li><%= link_to "Edit", edit_book_path(book) %></li>
+        <li><%= button_to "Delete", @book, method: :delete %></li>
+      </ul>
+      
+    </nav>
+  </li>
