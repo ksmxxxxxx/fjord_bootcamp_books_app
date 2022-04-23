@@ -1,4 +1,9 @@
   <li id="<%= dom_id book %>">
+    <%- if book.picture.present? %>
+      <figure>
+        <%= image_tag(book.picture_url) %>
+      </figure>
+    <%- end %>
     <dl>
       <dt>Title</dt>
       <dd>
